@@ -1,0 +1,32 @@
+My encoding computes the 3 small instances quite fast:
+5-3: 50ms
+8-4: 60ms
+12-4: 60ms
+
+21-4 needs more than 1 minute with G12-fd.
+However, it takes only 90ms to solve 21-8 with G12-MIP. The solution are shown below:
+
+21	8		
+1	8	0	2
+2	7	0	3
+3	7	0	3
+4	7	0	3
+5	5	0	1
+5	6	0	3
+5	7	0	1
+6	4	0	4
+6	5	0	1
+7	3	0	5
+8	2	0	2
+8	3	0	3
+9	2	0	1
+9	5	2	0
+9	8	2	0
+10	4	1	0
+10	5	4	0
+11	3	1	0
+11	4	4	0
+12	1	0	3
+15	3	4	0
+16	3	4	0
+17	1	4	0

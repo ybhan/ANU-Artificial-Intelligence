@@ -1,0 +1,14 @@
+I write two encodings to solve this problem based on Q1. The fundamental idea is to solve the original problem as Q1, and meanwhile assign a sequence for each truck.
+
+During my experiment, I come up with two data structures to record the sequences. One is step[trucks, customers], whose column indices are customers and the variable means when the truck visits the customer. The other is pos[trucks, times], which stores customers in the exact visiting order.
+
+In practice, the former consumes almost only 1/10 of the time the latter needs. Statistically:
+
+5-3: 100ms
+8-4: 50ms
+12-4: 1.5s
+21-8: 47s
+
+Even the 21-8 problem can be solved in 1 min, how surprising!!!
+
+However, this amazing method cannot tell me the real visiting sequence, so in Q3 I have to go back to the latter data structure.

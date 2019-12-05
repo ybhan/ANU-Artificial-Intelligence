@@ -1,0 +1,12 @@
+Call of my LNS function: LNS(problem, solution, k, iteration)
+
+My idea of destroying is to first "understand" the given solution as my model variable assignments (please see the comments in my programs in detail). Thereby, one line of solution (except the first line of course) will be interpreted into 3 constraint statements. After interpreting all of them as constraint sentences, I randomly destroy (remove) k of them, and add the rest to original problem constraints. Then it can be regarded as a tightened problem, and thus can be repaired using the same model. I just manually define proper k and iteration, the result will be gradually optimized.
+
+In reality, my settings of parameters are:
+
+5-3:	k=5	iteration=50
+8-4:	k=5	iteration=20
+12-4:	k=2	iteration=30
+21-8:	k=2	iteration=20
+
+And the results look pleasant (not bad at all)!
