@@ -1,0 +1,164 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/depot/domain.pddl benchmarks/depot/problem02.pddl depot_tmp 1:20:1 -q ramp -p true -l reachable -r true) >> logs/depot02_r 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/depot/domain.pddl
+    Problem file:         benchmarks/depot/problem02.pddl
+    Experiment name:      depot_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: reachable
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.001997709274291992
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.1366121768951416
+Grounding the problem...
+Grounding time: 0.03130388259887695
+Simplifying the ground encoding...
+Simplify time: 0.041819095611572266
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 8 9 10 
+Plangraph invariants time: 0.20967888832092285
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.7142159938812256
+Writing CNF file...
+Total variables: 300
+Total clauses: 3219
+Writing time: 0.005374908447265625
+Solving...
+UNSAT
+Solution time:  0.01040506362915039
+Step time: 2.739938735961914
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.5950567722320557
+Writing CNF file...
+Total variables: 528
+Total clauses: 6345
+Writing time: 0.010251045227050781
+Solving...
+UNSAT
+Solution time:  0.013260841369628906
+Step time: 2.6284377574920654
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.762763023376465
+Writing CNF file...
+Total variables: 756
+Total clauses: 9464
+Writing time: 0.01676201820373535
+Solving...
+UNSAT
+Solution time:  0.018130064010620117
+Step time: 2.808789014816284
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.886732578277588
+Writing CNF file...
+Total variables: 984
+Total clauses: 12568
+Writing time: 0.02275824546813965
+Solving...
+UNSAT
+Solution time:  0.01900005340576172
+Step time: 2.9417479038238525
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 3.1786749362945557
+Writing CNF file...
+Total variables: 1212
+Total clauses: 15644
+Writing time: 0.0272369384765625
+Solving...
+UNSAT
+Solution time:  0.02449488639831543
+Step time: 3.2418999671936035
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.616364002227783
+Writing CNF file...
+Total variables: 1440
+Total clauses: 18701
+Writing time: 0.03045034408569336
+Solving...
+UNSAT
+Solution time:  0.02507781982421875
+Step time: 2.6812820434570312
+
+Step: 7
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.8493731021881104
+Writing CNF file...
+Total variables: 1668
+Total clauses: 21731
+Writing time: 0.0354461669921875
+Solving...
+UNSAT
+Solution time:  0.03959202766418457
+Step time: 2.933756113052368
+
+Step: 8
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.667884111404419
+Writing CNF file...
+Total variables: 1896
+Total clauses: 24738
+Writing time: 0.04088330268859863
+Solving...
+SAT
+Solution time:  0.053211212158203125
+Extracting the plan...
+Plan:
+0: drive truck1 depot0 distributor1
+0: lift hoist0 crate0 pallet0 depot0
+0: lift hoist1 crate3 pallet1 distributor0
+0: lift hoist2 crate2 crate1 distributor1
+1: load hoist0 crate0 truck0 depot0
+1: load hoist2 crate2 truck1 distributor1
+2: drive truck0 depot0 distributor1
+2: lift hoist2 crate1 pallet2 distributor1
+3: load hoist2 crate1 truck0 distributor1
+4: drive truck1 distributor1 distributor0
+4: unload hoist2 crate0 truck0 distributor1
+5: drive truck0 distributor1 distributor0
+5: drive truck1 distributor0 depot0
+5: drop hoist1 crate3 pallet1 distributor0
+6: unload hoist0 crate2 truck1 depot0
+6: unload hoist1 crate1 truck0 distributor0
+7: drop hoist2 crate0 pallet2 distributor1
+7: drop hoist0 crate2 pallet0 depot0
+7: drop hoist1 crate1 crate3 distributor0
+Simulating plan for validation.
+Plan valid. 19 actions.
+Step time: 2.7735092639923096
+Total time: 23.184919595718384
+
+
+Time spent: 22.920 seconds

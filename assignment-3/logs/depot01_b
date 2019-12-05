@@ -1,0 +1,118 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/depot/domain.pddl benchmarks/depot/problem01.pddl depot_tmp 1:100:1 -q ramp -p true -l both -r true) >> logs/depot01_b 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/depot/domain.pddl
+    Problem file:         benchmarks/depot/problem01.pddl
+    Experiment name:      depot_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 100 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019028186798095703
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.11816716194152832
+Grounding the problem...
+Grounding time: 0.024333953857421875
+Simplifying the ground encoding...
+Simplify time: 0.015197992324829102
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 8 
+Plangraph invariants time: 0.0501101016998291
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.04804420471191406
+Writing CNF file...
+Total variables: 136
+Total clauses: 816
+Writing time: 0.0017600059509277344
+Solving...
+UNSAT
+Solution time:  0.007875919342041016
+Step time: 0.06705117225646973
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.04816317558288574
+Writing CNF file...
+Total variables: 234
+Total clauses: 1604
+Writing time: 0.0034759044647216797
+Solving...
+UNSAT
+Solution time:  0.008630990982055664
+Step time: 0.06926417350769043
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.046688079833984375
+Writing CNF file...
+Total variables: 332
+Total clauses: 2380
+Writing time: 0.0042760372161865234
+Solving...
+UNSAT
+Solution time:  0.009439945220947266
+Step time: 0.06949400901794434
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.04792594909667969
+Writing CNF file...
+Total variables: 430
+Total clauses: 3179
+Writing time: 0.005365133285522461
+Solving...
+UNSAT
+Solution time:  0.010109901428222656
+Step time: 0.07239198684692383
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.04935121536254883
+Writing CNF file...
+Total variables: 528
+Total clauses: 4093
+Writing time: 0.006783008575439453
+Solving...
+SAT
+Solution time:  0.012080192565917969
+Extracting the plan...
+Plan:
+0: drive truck0 distributor1 depot0
+0: drive truck1 depot0 distributor0
+0: lift hoist0 crate1 pallet0 depot0
+0: lift hoist1 crate0 pallet1 distributor0
+1: load hoist0 crate1 truck0 depot0
+1: load hoist1 crate0 truck1 distributor0
+2: drive truck0 depot0 distributor0
+2: drive truck1 distributor0 distributor1
+3: unload hoist1 crate1 truck0 distributor0
+3: unload hoist2 crate0 truck1 distributor1
+4: drop hoist1 crate1 pallet1 distributor0
+4: drop hoist2 crate0 pallet2 distributor1
+Simulating plan for validation.
+Plan valid. 12 actions.
+Step time: 0.08005404472351074
+Total time: 0.5779311656951904
+
+
+Time spent: 0.680 seconds

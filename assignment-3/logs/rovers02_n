@@ -1,0 +1,129 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/rovers/domain.pddl benchmarks/rovers/problem02.pddl rovers_tmp 1:20:1 -q ramp -p false -r true) >> logs/rovers02_n 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/rovers/domain.pddl
+    Problem file:         benchmarks/rovers/problem02.pddl
+    Experiment name:      rovers_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     False
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.002026081085205078
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.26799988746643066
+Grounding the problem...
+Grounding time: 0.02680492401123047
+Simplifying the ground encoding...
+Simplify time: 0.004209041595458984
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.023301124572753906
+Writing CNF file...
+Total variables: 112
+Total clauses: 837
+Writing time: 0.0017590522766113281
+Solving...
+UNSAT
+Solution time:  0.007827997207641602
+Step time: 0.04240226745605469
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.024068117141723633
+Writing CNF file...
+Total variables: 195
+Total clauses: 1642
+Writing time: 0.0030939579010009766
+Solving...
+UNSAT
+Solution time:  0.008817911148071289
+Step time: 0.04501008987426758
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.03174304962158203
+Writing CNF file...
+Total variables: 278
+Total clauses: 2447
+Writing time: 0.004211902618408203
+Solving...
+UNSAT
+Solution time:  0.009853363037109375
+Step time: 0.05489802360534668
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.02674388885498047
+Writing CNF file...
+Total variables: 361
+Total clauses: 3252
+Writing time: 0.005700111389160156
+Solving...
+UNSAT
+Solution time:  0.010533809661865234
+Step time: 0.05214500427246094
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0271298885345459
+Writing CNF file...
+Total variables: 444
+Total clauses: 4057
+Writing time: 0.00681304931640625
+Solving...
+UNSAT
+Solution time:  0.011855125427246094
+Step time: 0.05512404441833496
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.028280973434448242
+Writing CNF file...
+Total variables: 527
+Total clauses: 4862
+Writing time: 0.007973909378051758
+Solving...
+SAT
+Solution time:  0.01901984214782715
+Extracting the plan...
+Plan:
+0: sample_soil rover0 rover0store waypoint0
+0: calibrate rover0 camera0 objective0 waypoint0
+0: request_channel rover0 general
+1: drop rover0 rover0store
+1: take_image rover0 waypoint0 objective1 camera0 low_res
+1: communicate_soil_data rover0 general waypoint0 waypoint0 waypoint1
+2: request_channel rover0 general
+3: calibrate rover0 camera0 objective0 waypoint0
+3: communicate_image_data rover0 general objective1 low_res waypoint0 waypoint1
+4: sample_rock rover0 rover0store waypoint0
+4: request_channel rover0 general
+5: drop rover0 rover0store
+5: communicate_rock_data rover0 general waypoint0 waypoint0 waypoint1
+Simulating plan for validation.
+Plan valid. 13 actions.
+Step time: 0.06507301330566406
+Total time: 0.6262531280517578
+
+
+Time spent: 0.740 seconds

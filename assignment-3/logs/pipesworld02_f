@@ -1,0 +1,131 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/pipesworld/domain.pddl benchmarks/pipesworld/problem02.pddl pipesworld_tmp 1:20:1 -q ramp -p true -l fmutex -r true) >> logs/pipesworld02_f 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/pipesworld/domain.pddl
+    Problem file:         benchmarks/pipesworld/problem02.pddl
+    Experiment name:      pipesworld_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: fmutex
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0018990039825439453
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.25924205780029297
+Grounding the problem...
+Grounding time: 0.03066277503967285
+Simplifying the ground encoding...
+Simplify time: 0.027619123458862305
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 
+Plangraph invariants time: 0.09966397285461426
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.562762975692749
+Writing CNF file...
+Total variables: 188
+Total clauses: 1752
+Writing time: 0.0032961368560791016
+Solving...
+UNSAT
+Solution time:  0.009222984313964844
+Step time: 0.58489990234375
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.5730478763580322
+Writing CNF file...
+Total variables: 334
+Total clauses: 3559
+Writing time: 0.006342172622680664
+Solving...
+UNSAT
+Solution time:  0.012209892272949219
+Step time: 0.6029708385467529
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.5869932174682617
+Writing CNF file...
+Total variables: 480
+Total clauses: 5377
+Writing time: 0.00935506820678711
+Solving...
+UNSAT
+Solution time:  0.012548685073852539
+Step time: 0.6185421943664551
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.589871883392334
+Writing CNF file...
+Total variables: 626
+Total clauses: 7207
+Writing time: 0.012897014617919922
+Solving...
+UNSAT
+Solution time:  0.016170978546142578
+Step time: 0.6336929798126221
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.59433913230896
+Writing CNF file...
+Total variables: 772
+Total clauses: 9061
+Writing time: 0.01853179931640625
+Solving...
+UNSAT
+Solution time:  0.018595218658447266
+Step time: 0.6406440734863281
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.5838241577148438
+Writing CNF file...
+Total variables: 918
+Total clauses: 10919
+Writing time: 0.01869487762451172
+Solving...
+SAT
+Solution time:  0.020073890686035156
+Extracting the plan...
+Plan:
+0: push-unitarypipe s12 b0 a1 a2 b4 oc1b lco
+0: pop-unitarypipe s13 b1 a1 a3 b5 lco oca1
+1: push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b
+1: push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco
+2: push-unitarypipe s13 b3 a1 a3 b2 rat-a gasoleo
+2: pop-unitarypipe s12 b4 a1 a2 b5 lco oca1
+3: pop-unitarypipe s13 b1 a1 a3 b3 lco rat-a
+3: pop-unitarypipe s12 b0 a1 a2 b4 oc1b lco
+4: push-unitarypipe s12 b5 a1 a2 b0 oca1 oc1b
+4: pop-unitarypipe s13 b2 a1 a3 b1 gasoleo lco
+5: push-unitarypipe s13 b3 a1 a3 b2 rat-a gasoleo
+5: push-unitarypipe s12 b1 a1 a2 b5 lco oca1
+Simulating plan for validation.
+Plan valid. 12 actions.
+Step time: 0.6327869892120361
+Total time: 4.144351959228516
+
+
+Time spent: 4.240 seconds

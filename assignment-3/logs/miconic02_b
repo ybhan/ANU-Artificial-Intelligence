@@ -1,0 +1,126 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/miconic/domain.pddl benchmarks/miconic/problem02.pddl miconic_tmp 1:20:1 -q ramp -p true -l both -r true) >> logs/miconic02_b 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/miconic/domain.pddl
+    Problem file:         benchmarks/miconic/problem02.pddl
+    Experiment name:      miconic_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019290447235107422
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.0637197494506836
+Grounding the problem...
+Grounding time: 0.014022350311279297
+Simplifying the ground encoding...
+Simplify time: 0.0010497570037841797
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 
+Plangraph invariants time: 0.0032091140747070312
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0013828277587890625
+Writing CNF file...
+Total variables: 32
+Total clauses: 117
+Writing time: 0.0005500316619873047
+Solving...
+UNSAT
+Solution time:  0.007271289825439453
+Step time: 0.018478870391845703
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.001062154769897461
+Writing CNF file...
+Total variables: 56
+Total clauses: 220
+Writing time: 0.0007417201995849609
+Solving...
+UNSAT
+Solution time:  0.0074269771575927734
+Step time: 0.018063068389892578
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0012078285217285156
+Writing CNF file...
+Total variables: 80
+Total clauses: 317
+Writing time: 0.0009181499481201172
+Solving...
+UNSAT
+Solution time:  0.0074880123138427734
+Step time: 0.018641948699951172
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0014607906341552734
+Writing CNF file...
+Total variables: 104
+Total clauses: 420
+Writing time: 0.0011150836944580078
+Solving...
+UNSAT
+Solution time:  0.007814168930053711
+Step time: 0.019594907760620117
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0015609264373779297
+Writing CNF file...
+Total variables: 128
+Total clauses: 517
+Writing time: 0.0012941360473632812
+Solving...
+UNSAT
+Solution time:  0.007971048355102539
+Step time: 0.019842863082885742
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0017108917236328125
+Writing CNF file...
+Total variables: 152
+Total clauses: 611
+Writing time: 0.0016789436340332031
+Solving...
+SAT
+Solution time:  0.008095979690551758
+Extracting the plan...
+Plan:
+0: up f0 f1
+1: board f1 p1
+2: up f1 f3
+3: board f3 p0
+3: depart f3 p1
+4: down f3 f2
+5: depart f2 p0
+Simulating plan for validation.
+Plan valid. 7 actions.
+Step time: 0.020823955535888672
+Total time: 0.20827221870422363
+
+
+Time spent: 0.330 seconds

@@ -1,0 +1,6 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/rovers/domain.pddl benchmarks/rovers/problem10.pddl rovers_tmp 1:20:1 -q ramp -p false -r true) >> logs/rovers10_n 2>&1
+
+
+Failed! [Signal 38912, Time 95.240 seconds]

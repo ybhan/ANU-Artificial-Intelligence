@@ -1,0 +1,133 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/rovers/domain.pddl benchmarks/rovers/problem04.pddl rovers_tmp 1:20:1 -q ramp -p false -r true) >> logs/rovers04_n 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/rovers/domain.pddl
+    Problem file:         benchmarks/rovers/problem04.pddl
+    Experiment name:      rovers_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     False
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.001954793930053711
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.28476524353027344
+Grounding the problem...
+Grounding time: 0.02786993980407715
+Simplifying the ground encoding...
+Simplify time: 0.012410879135131836
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.1607222557067871
+Writing CNF file...
+Total variables: 192
+Total clauses: 1222
+Writing time: 0.002549886703491211
+Solving...
+UNSAT
+Solution time:  0.00863504409790039
+Step time: 0.18158817291259766
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.16373395919799805
+Writing CNF file...
+Total variables: 332
+Total clauses: 2389
+Writing time: 0.004321098327636719
+Solving...
+UNSAT
+Solution time:  0.010069131851196289
+Step time: 0.1873950958251953
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.1749560832977295
+Writing CNF file...
+Total variables: 472
+Total clauses: 3556
+Writing time: 0.005967140197753906
+Solving...
+UNSAT
+Solution time:  0.01090097427368164
+Step time: 0.20111894607543945
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.1729259490966797
+Writing CNF file...
+Total variables: 612
+Total clauses: 4723
+Writing time: 0.007956981658935547
+Solving...
+UNSAT
+Solution time:  0.014495134353637695
+Step time: 0.205399751663208
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.17615699768066406
+Writing CNF file...
+Total variables: 752
+Total clauses: 5890
+Writing time: 0.010539770126342773
+Solving...
+UNSAT
+Solution time:  0.013695955276489258
+Step time: 0.20975995063781738
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.17909979820251465
+Writing CNF file...
+Total variables: 892
+Total clauses: 7057
+Writing time: 0.01169896125793457
+Solving...
+SAT
+Solution time:  0.019433975219726562
+Extracting the plan...
+Plan:
+0: sample_soil rover0 rover0store waypoint3
+0: sample_soil rover1 rover1store waypoint2
+0: calibrate rover1 camera0 objective0 waypoint2
+0: request_channel rover0 general
+1: navigate rover1 waypoint2 waypoint1
+1: communicate_soil_data rover0 general waypoint3 waypoint3 waypoint2
+2: take_image rover1 waypoint1 objective0 camera0 high_res
+2: request_channel rover1 general
+3: drop rover0 rover0store
+3: drop rover1 rover1store
+3: calibrate rover1 camera0 objective0 waypoint1
+3: communicate_image_data rover1 general objective0 high_res waypoint1 waypoint2
+4: sample_rock rover1 rover1store waypoint1
+4: take_image rover1 waypoint1 objective0 camera0 high_res
+4: request_channel rover1 general
+5: drop rover1 rover1store
+5: communicate_rock_data rover1 general waypoint1 waypoint1 waypoint2
+Simulating plan for validation.
+Plan valid. 17 actions.
+Step time: 0.2203807830810547
+Total time: 1.5427498817443848
+
+
+Time spent: 1.650 seconds

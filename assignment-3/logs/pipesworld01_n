@@ -1,0 +1,82 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/pipesworld/domain.pddl benchmarks/pipesworld/problem01.pddl pipesworld_tmp 1:20:1 -q ramp -p false -r true) >> logs/pipesworld01_n 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/pipesworld/domain.pddl
+    Problem file:         benchmarks/pipesworld/problem01.pddl
+    Experiment name:      pipesworld_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     False
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0024039745330810547
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.33844900131225586
+Grounding the problem...
+Grounding time: 0.033345937728881836
+Simplifying the ground encoding...
+Simplify time: 0.028079986572265625
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 1.3221509456634521
+Writing CNF file...
+Total variables: 212
+Total clauses: 1974
+Writing time: 0.0040149688720703125
+Solving...
+UNSAT
+Solution time:  0.012098073959350586
+Step time: 1.3511018753051758
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 1.3972370624542236
+Writing CNF file...
+Total variables: 382
+Total clauses: 3904
+Writing time: 0.013406991958618164
+Solving...
+UNSAT
+Solution time:  0.016631126403808594
+Step time: 1.445246934890747
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 1.4910888671875
+Writing CNF file...
+Total variables: 552
+Total clauses: 5834
+Writing time: 0.012430191040039062
+Solving...
+SAT
+Solution time:  0.016705989837646484
+Extracting the plan...
+Plan:
+0: pop-unitarypipe s13 b1 a1 a3 b5 lco oca1
+1: push-unitarypipe s12 b5 a1 a2 b4 oca1 lco
+1: push-unitarypipe s13 b2 a1 a3 b1 gasoleo lco
+2: push-unitarypipe s13 b3 a1 a3 b2 rat-a gasoleo
+2: push-unitarypipe s12 b0 a1 a2 b5 oc1b oca1
+Simulating plan for validation.
+Plan valid. 5 actions.
+Step time: 1.5326919555664062
+Total time: 4.744217157363892
+
+
+Time spent: 4.730 seconds

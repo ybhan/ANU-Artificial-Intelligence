@@ -1,0 +1,47 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/depot/domain.pddl benchmarks/depot/problem09.pddl depot_tmp 1:20:1 -q ramp -p true -l reachable -r true) >> logs/depot09_r 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/depot/domain.pddl
+    Problem file:         benchmarks/depot/problem09.pddl
+    Experiment name:      depot_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: reachable
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019371509552001953
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.22139191627502441
+Grounding the problem...
+Grounding time: 0.10126996040344238
+Simplifying the ground encoding...
+Simplify time: 2.1123180389404297
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
+Plangraph invariants time: 11.258150815963745
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Traceback (most recent call last):
+  File "planner.py", line 384, in <module>
+    main()
+  File "planner.py", line 273, in main
+    args.plangraph_constraints)
+  File "/Users/hanyuanbo/Desktop/assignment-3/cnf_encodings/basic.py", line 519, in encode
+    self.make_interference_mutex_axioms(horizon)
+  File "/Users/hanyuanbo/Desktop/assignment-3/cnf_encodings/basic.py", line 347, in make_interference_mutex_axioms
+    if (a1, a2) in interference - inconsistency:
+KeyboardInterrupt

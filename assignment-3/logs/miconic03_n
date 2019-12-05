@@ -1,0 +1,152 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/miconic/domain.pddl benchmarks/miconic/problem03.pddl miconic_tmp 1:20:1 -q ramp -p false -r true) >> logs/miconic03_n 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/miconic/domain.pddl
+    Problem file:         benchmarks/miconic/problem03.pddl
+    Experiment name:      miconic_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     False
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019419193267822266
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.07442593574523926
+Grounding the problem...
+Grounding time: 0.01577305793762207
+Simplifying the ground encoding...
+Simplify time: 0.002110004425048828
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.005097389221191406
+Writing CNF file...
+Total variables: 60
+Total clauses: 237
+Writing time: 0.0007569789886474609
+Solving...
+UNSAT
+Solution time:  0.0075228214263916016
+Step time: 0.022608280181884766
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.005041837692260742
+Writing CNF file...
+Total variables: 108
+Total clauses: 459
+Writing time: 0.0012142658233642578
+Solving...
+UNSAT
+Solution time:  0.0075457096099853516
+Step time: 0.023021936416625977
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.005807161331176758
+Writing CNF file...
+Total variables: 156
+Total clauses: 681
+Writing time: 0.002511739730834961
+Solving...
+UNSAT
+Solution time:  0.010153055191040039
+Step time: 0.027646303176879883
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.0061397552490234375
+Writing CNF file...
+Total variables: 204
+Total clauses: 903
+Writing time: 0.0036911964416503906
+Solving...
+UNSAT
+Solution time:  0.008854150772094727
+Step time: 0.028300046920776367
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.006659030914306641
+Writing CNF file...
+Total variables: 252
+Total clauses: 1125
+Writing time: 0.0023832321166992188
+Solving...
+UNSAT
+Solution time:  0.01004791259765625
+Step time: 0.028532981872558594
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.006448030471801758
+Writing CNF file...
+Total variables: 300
+Total clauses: 1347
+Writing time: 0.002624988555908203
+Solving...
+UNSAT
+Solution time:  0.013400793075561523
+Step time: 0.03137683868408203
+
+Step: 7
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.006977081298828125
+Writing CNF file...
+Total variables: 348
+Total clauses: 1569
+Writing time: 0.003255128860473633
+Solving...
+UNSAT
+Solution time:  0.01866602897644043
+Step time: 0.03786921501159668
+
+Step: 8
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 0.007102012634277344
+Writing CNF file...
+Total variables: 396
+Total clauses: 1791
+Writing time: 0.003319978713989258
+Solving...
+SAT
+Solution time:  0.014292001724243164
+Extracting the plan...
+Plan:
+0: up f0 f3
+1: board f3 p1
+2: up f3 f5
+3: board f5 p2
+4: down f5 f1
+5: board f1 p0
+5: depart f1 p1
+5: depart f1 p2
+6: up f1 f4
+7: depart f4 p0
+Simulating plan for validation.
+Plan valid. 10 actions.
+Step time: 0.034223079681396484
+Total time: 0.33696675300598145
+
+
+Time spent: 0.450 seconds

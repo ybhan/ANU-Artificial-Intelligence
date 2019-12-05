@@ -1,0 +1,32 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/pipesworld/domain.pddl benchmarks/pipesworld/problem10.pddl pipesworld_tmp 1:20:1 -q ramp -p true -l reachable -r true) >> logs/pipesworld10_r 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/pipesworld/domain.pddl
+    Problem file:         benchmarks/pipesworld/problem10.pddl
+    Experiment name:      pipesworld_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: reachable
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019011497497558594
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.29741382598876953
+Grounding the problem...
+Grounding time: 0.06022000312805176
+Simplifying the ground encoding...
+Simplify time: 0.16957306861877441
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 
+Failed! [Signal 38912, Time 95.180 seconds]

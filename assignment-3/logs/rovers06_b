@@ -1,0 +1,350 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/rovers/domain.pddl benchmarks/rovers/problem06.pddl rovers_tmp 1:20:1 -q ramp -p true -l both -r true) >> logs/rovers06_b 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/rovers/domain.pddl
+    Problem file:         benchmarks/rovers/problem06.pddl
+    Experiment name:      rovers_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: both
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.0019588470458984375
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.3402831554412842
+Grounding the problem...
+Grounding time: 0.033251047134399414
+Simplifying the ground encoding...
+Simplify time: 0.015026092529296875
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 8 
+Plangraph invariants time: 0.1609959602355957
+Planning...
+
+Step: 1
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.207498073577881
+Writing CNF file...
+Total variables: 310
+Total clauses: 3886
+Writing time: 0.006122112274169922
+Solving...
+UNSAT
+Solution time:  0.010313034057617188
+Step time: 2.2332870960235596
+
+Step: 2
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.214395046234131
+Writing CNF file...
+Total variables: 555
+Total clauses: 7767
+Writing time: 0.012292861938476562
+Solving...
+UNSAT
+Solution time:  0.013664960861206055
+Step time: 2.249419927597046
+
+Step: 3
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2239012718200684
+Writing CNF file...
+Total variables: 800
+Total clauses: 11676
+Writing time: 0.020891904830932617
+Solving...
+UNSAT
+Solution time:  0.017134904861450195
+Step time: 2.2709851264953613
+
+Step: 4
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.4318439960479736
+Writing CNF file...
+Total variables: 1045
+Total clauses: 15540
+Writing time: 0.024027109146118164
+Solving...
+UNSAT
+Solution time:  0.020816802978515625
+Step time: 2.485883951187134
+
+Step: 5
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2316367626190186
+Writing CNF file...
+Total variables: 1290
+Total clauses: 19301
+Writing time: 0.03247189521789551
+Solving...
+UNSAT
+Solution time:  0.02429485321044922
+Step time: 2.297353982925415
+
+Step: 6
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.224285364151001
+Writing CNF file...
+Total variables: 1535
+Total clauses: 22993
+Writing time: 0.03596901893615723
+Solving...
+UNSAT
+Solution time:  0.027997970581054688
+Step time: 2.2972211837768555
+
+Step: 7
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2390670776367188
+Writing CNF file...
+Total variables: 1780
+Total clauses: 26657
+Writing time: 0.04108881950378418
+Solving...
+UNSAT
+Solution time:  0.03255605697631836
+Step time: 2.321784019470215
+
+Step: 8
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2417101860046387
+Writing CNF file...
+Total variables: 2025
+Total clauses: 30318
+Writing time: 0.04635787010192871
+Solving...
+UNSAT
+Solution time:  0.03748011589050293
+Step time: 2.3347079753875732
+
+Step: 9
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.23807692527771
+Writing CNF file...
+Total variables: 2270
+Total clauses: 33979
+Writing time: 0.05132317543029785
+Solving...
+UNSAT
+Solution time:  0.04233193397521973
+Step time: 2.3416802883148193
+
+Step: 10
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.3794472217559814
+Writing CNF file...
+Total variables: 2515
+Total clauses: 37640
+Writing time: 0.05873608589172363
+Solving...
+UNSAT
+Solution time:  0.05614495277404785
+Step time: 2.504415988922119
+
+Step: 11
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2995660305023193
+Writing CNF file...
+Total variables: 2760
+Total clauses: 41301
+Writing time: 0.06293678283691406
+Solving...
+UNSAT
+Solution time:  0.12140488624572754
+Step time: 2.493713855743408
+
+Step: 12
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.316838026046753
+Writing CNF file...
+Total variables: 3005
+Total clauses: 44962
+Writing time: 0.0688791275024414
+Solving...
+UNSAT
+Solution time:  0.21257400512695312
+Step time: 2.6076040267944336
+
+Step: 13
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.3830039501190186
+Writing CNF file...
+Total variables: 3250
+Total clauses: 48623
+Writing time: 0.07776308059692383
+Solving...
+UNSAT
+Solution time:  0.1857008934020996
+Step time: 2.656625986099243
+
+Step: 14
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.352263927459717
+Writing CNF file...
+Total variables: 3495
+Total clauses: 52284
+Writing time: 0.07905888557434082
+Solving...
+UNSAT
+Solution time:  0.2624399662017822
+Step time: 2.7041659355163574
+
+Step: 15
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.2906551361083984
+Writing CNF file...
+Total variables: 3740
+Total clauses: 55945
+Writing time: 0.08553910255432129
+Solving...
+UNSAT
+Solution time:  0.45964598655700684
+Step time: 2.8457932472229004
+
+Step: 16
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.3734731674194336
+Writing CNF file...
+Total variables: 3985
+Total clauses: 59606
+Writing time: 0.09712886810302734
+Solving...
+UNSAT
+Solution time:  0.9336268901824951
+Step time: 3.4143919944763184
+
+Step: 17
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.469569206237793
+Writing CNF file...
+Total variables: 4230
+Total clauses: 63267
+Writing time: 0.09979891777038574
+Solving...
+UNSAT
+Solution time:  1.8344557285308838
+Step time: 4.4163572788238525
+
+Step: 18
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.41644024848938
+Writing CNF file...
+Total variables: 4475
+Total clauses: 66928
+Writing time: 0.10524797439575195
+Solving...
+UNSAT
+Solution time:  4.393265962600708
+Step time: 6.925359010696411
+
+Step: 19
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.309347152709961
+Writing CNF file...
+Total variables: 4720
+Total clauses: 70589
+Writing time: 0.10660886764526367
+Solving...
+UNSAT
+Solution time:  23.604567050933838
+Step time: 26.030647039413452
+
+Step: 20
+-------------------------------------------------
+Generating base encoding: basic ...
+Encoding generation time: 2.3004369735717773
+Writing CNF file...
+Total variables: 4965
+Total clauses: 74250
+Writing time: 0.11355018615722656
+Solving...
+SAT
+Solution time:  0.4580647945404053
+Extracting the plan...
+Plan:
+0: navigate rover0 waypoint1 waypoint0
+0: sample_soil rover1 rover1store waypoint4
+0: request_channel rover1 general
+1: navigate rover0 waypoint0 waypoint3
+1: drop rover1 rover1store
+1: calibrate rover1 camera2 objective0 waypoint4
+1: communicate_soil_data rover1 general waypoint4 waypoint4 waypoint3
+2: sample_rock rover0 rover0store waypoint3
+2: calibrate rover0 camera0 objective0 waypoint3
+2: take_image rover1 waypoint4 objective0 camera2 colour
+2: request_channel rover1 general
+3: navigate rover0 waypoint3 waypoint0
+3: drop rover0 rover0store
+3: communicate_image_data rover1 general objective0 colour waypoint4 waypoint3
+4: navigate rover1 waypoint4 waypoint1
+4: take_image rover0 waypoint0 objective1 camera0 low_res
+4: request_channel rover0 general
+5: sample_soil rover1 rover1store waypoint1
+5: communicate_image_data rover0 general objective1 low_res waypoint0 waypoint3
+6: navigate rover1 waypoint1 waypoint4
+6: request_channel rover0 general
+7: navigate rover1 waypoint4 waypoint5
+7: sample_rock rover0 rover0store waypoint0
+7: drop rover1 rover1store
+7: communicate_rock_data rover0 general waypoint3 waypoint0 waypoint3
+8: navigate rover0 waypoint0 waypoint2
+8: sample_soil rover1 rover1store waypoint5
+8: request_channel rover1 general
+9: drop rover1 rover1store
+9: drop rover0 rover0store
+9: communicate_soil_data rover1 general waypoint1 waypoint5 waypoint3
+10: navigate rover1 waypoint5 waypoint2
+10: request_channel rover0 general
+11: sample_soil rover1 rover1store waypoint2
+11: communicate_rock_data rover0 general waypoint0 waypoint2 waypoint3
+12: drop rover1 rover1store
+12: request_channel rover1 general
+13: calibrate rover0 camera0 objective0 waypoint2
+13: communicate_soil_data rover1 general waypoint5 waypoint2 waypoint3
+14: sample_rock rover0 rover0store waypoint2
+14: take_image rover0 waypoint2 objective0 camera0 low_res
+14: request_channel rover1 general
+15: navigate rover0 waypoint2 waypoint0
+15: communicate_soil_data rover1 general waypoint2 waypoint2 waypoint3
+16: drop rover0 rover0store
+16: request_channel rover0 general
+17: communicate_image_data rover0 general objective0 low_res waypoint0 waypoint3
+18: request_channel rover0 general
+19: communicate_rock_data rover0 general waypoint2 waypoint0 waypoint3
+Simulating plan for validation.
+Plan valid. 49 actions.
+Step time: 2.885658025741577
+Total time: 80.88109421730042
+
+
+Time spent: 80.120 seconds

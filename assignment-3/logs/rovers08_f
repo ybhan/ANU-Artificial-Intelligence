@@ -1,0 +1,32 @@
+Timeout: 100 seconds
+Heap restriction: 1024 MB
+Command: (python3 planner.py benchmarks/rovers/domain.pddl benchmarks/rovers/problem08.pddl rovers_tmp 1:20:1 -q ramp -p true -l fmutex -r true) >> logs/rovers08_f 2>&1
+
+Starting SAT-based planner...
+Checking for plugins...
+Encodings registered:    3
+Solvers registered:      1
+Command line options:
+    Domain file:          benchmarks/rovers/domain.pddl
+    Problem file:         benchmarks/rovers/problem08.pddl
+    Experiment name:      rovers_tmp
+    Query strategy:        ramp, min_h = 1 max_h = 20 step_h = 1
+    Compute plangraph:     True
+    Plangraph constraints: fmutex
+    Encoding:              basic
+    Solver                 precosat
+    SAT solver time out    None
+    Write debug CNF:       False
+    Remove tmp files:      True
+Command line arg processing time: 0.002402067184448242
+Parsing the PDDL domain...
+Parsing the PDDL problem...
+Simplifying the problem representation...
+Parsing time: 0.47940611839294434
+Grounding the problem...
+Grounding time: 0.042842864990234375
+Simplifying the ground encoding...
+Simplify time: 0.03465414047241211
+Generating Plangraph invariants...
+Step: 0 1 2 3 4 5 6 7 8 
+Failed! [Signal 38912, Time 95.300 seconds]
